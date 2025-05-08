@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  form input, form select, form button {
+    margin: 5px;
+  }
+  
+  .summary {
+    margin-bottom: 20px;
+  }
+  
+  canvas {
+    max-width: 600px;
+  }
+  

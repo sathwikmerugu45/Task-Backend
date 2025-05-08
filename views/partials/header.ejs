@@ -10,7 +10,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <% if(user) { %>
+            <% if (user) { %>
               <li class="nav-item">
                 <a class="nav-link <%= typeof title !== 'undefined' && title === 'Dashboard' ? 'active' : '' %>" href="/dashboard">
                   <i class="fas fa-chart-line me-1"></i>Dashboard
@@ -51,3 +51,11 @@
                 <a class="nav-link <%= typeof title !== 'undefined' && title === 'Register' ? 'active' : '' %>" href="/auth/register">
                   <i class="fas fa-user-plus me-1"></i>Register
                 </a>
+              </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  

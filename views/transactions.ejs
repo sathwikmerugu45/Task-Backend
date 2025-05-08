@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transactions</title>
+  <link rel="stylesheet" href="/fcd.css">
+</head>
+<body>
+  <h1>Transactions</h1>
+  <form id="transaction-form">
+    <input type="text" name="description" placeholder="Description" required />
+    <input type="number" name="amount" placeholder="Amount" required />
+    <select name="type">
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+    <input type="date" name="date" required />
+    <button type="submit">Add</button>
+  </form>
+  <ul id="transaction-list">
+    <% transactions.forEach(t => { %>
+      <li>
+        <%= t.date %> - ₹<%= t.amount %> - <%= t.description %> (<%= t.type %>)
+        <button class="delete-btn" data-id="<%= t.id %>">Delete</button>
+      </li>
+    <% }) %>
+  </ul>
+  <script src="/js/transactions.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Budgets</title>
+  <link rel="stylesheet" href="/fcd.css">
+</head>
+<body>
+  <h1>Budget Settings</h1>
+  <form method="POST" action="/budgets">
+    <% categories.forEach(cat => { %>
+      <label><%= cat %> Budget: ₹</label>
+      <input type="number" name="budgets[<%= cat %>]" value="<%= userBudgets[cat] || 0 %>" /><br/>
+    <% }) %>
+    <button type="submit">Save Budgets</button>
+  </form>
+</body>
+</html>
